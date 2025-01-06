@@ -77,6 +77,8 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                 Image.asset('lib/img/turnosProgramados.jpg'),
+                 
                Card(
    color: Color(0xFFF0F0F0),
   elevation: 0, // Hace que el borde sea invisible
