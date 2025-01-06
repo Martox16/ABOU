@@ -31,3 +31,22 @@ HACERLO
 
 TELEFONO:
 HACERLO
+
+
+
+
+
+
+
+///////////////////////////////
+nuevos
+
+localstorege
+agregar  COMPLETA TU PERFIL
+funcionalidad de los 3 rayas
+funcionalidad de la persona
+
+
+NOVEDADES
+TELEFONO
+arreglar bug q corta pantalla
