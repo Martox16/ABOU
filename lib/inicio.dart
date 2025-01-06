@@ -79,7 +79,7 @@ class HomePage extends StatelessWidget {
               children: [
                Card(
    color: Color(0xFFF0F0F0),
- 
+  elevation: 0, // Hace que el borde sea invisible
   child: Padding(
     padding: const EdgeInsets.all(16.0),
     child: Column(
@@ -99,7 +99,7 @@ class HomePage extends StatelessWidget {
           children: [
             ServiceIcon(
               imagePath: 'lib/img/iconoDocumentos.png',
-              label: 'Mis documentos',
+              label: 'Documentos',
               onTap: () {
                 Navigator.push(
                   context,
