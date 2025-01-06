@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart'; // Importa url_launcher para abrir URLs
 
 class MisTurnos extends StatelessWidget {
-  final String headerImagePath = 'lib/img/headerMisTurnos.png';
-  final String cardImagePath = 'lib/img/cardParaMisTurnos.png';
+  final String headerImagePath = 'lib/img/headerMisTurnos.jpg';
+  final String cardImagePath = 'lib/img/cardParaMisTurnos.jpg';
   final String footerImagePath = 'lib/img/footer.png';
 
   @override
@@ -43,10 +43,16 @@ class MisTurnos extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   child: Column(
                     children: [
-                      Image.asset(
-                        cardImagePath,
-                        fit: BoxFit.cover,
-                        width: MediaQuery.of(context).size.width,
+                      GestureDetector(
+                        onTap: () {
+                          String url = 'https://wa.me/541139101010?text=¡Hola!%20Quiero%20hacerte%20una%20consulta.';
+                          launchURL(url); // Abrir el enlace de WhatsApp cuando se toque la imagen
+                        },
+                        child: Image.asset(
+                          cardImagePath,
+                          fit: BoxFit.cover,
+                          width: MediaQuery.of(context).size.width,
+                        ),
                       ),
                       // Puedes agregar más contenido aquí según sea necesario
                     ],

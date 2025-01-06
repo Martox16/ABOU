@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MisHijos extends StatelessWidget {
-  final String headerImagePath = 'lib/img/headerMisHijos.png';
-  final String cardImagePath = 'lib/img/cardMisHijos.png';
+  final String headerImagePath = 'lib/img/headerMisHijos.jpg';
+  final String cardImagePath = 'lib/img/cardMisHijos.jpg';
   final String footerImagePath = 'lib/img/footer.png';
 
   @override
@@ -40,10 +40,16 @@ class MisHijos extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   child: Column(
                     children: [
-                      Image.asset(
-                        cardImagePath,
-                        fit: BoxFit.cover,
-                        width: MediaQuery.of(context).size.width,
+                      GestureDetector(
+                        onTap: () {
+                          String url = 'https://wa.me/541139101010?text=¡Hola!%20Quiero%20hacerte%20una%20consulta.';
+                          launchURL(url); // Abrir el enlace de WhatsApp cuando se toque la imagen
+                        },
+                        child: Image.asset(
+                          cardImagePath,
+                          fit: BoxFit.cover,
+                          width: MediaQuery.of(context).size.width,
+                        ),
                       ),
                       // Puedes agregar más contenido aquí según sea necesario
                     ],

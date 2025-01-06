@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MiSalud extends StatelessWidget {
-  final String headerImagePath = 'lib/img/headerMiSalud.png';
-  final String cardImagePath = 'lib/img/cardUnoSalud.png';
+  final String headerImagePath = 'lib/img/headerMiSalud.jpg';
+  final String cardImagePath = 'lib/img/cardUnoSalud.jpg';
   final String cardImagePathDos = 'lib/img/cardDosSalud.png';
   final String cardImagePathTres = 'lib/img/cardTresSalud.png';
   final String footerImagePath = 'lib/img/footer.png';

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 class MisVehiculos extends StatelessWidget {
-  final String headerImagePath = 'lib/img/headerVehiculos.png';
-  final String cardImagePath = 'lib/img/cardParaVehiculo.png';
+  final String headerImagePath = 'lib/img/headerVei.jpg';
+  final String cardImagePath = 'lib/img/exteriorVei.jpg';
   final String footerImagePath = 'lib/img/footer.png';
+  final String ImagePath = 'lib/img/nohayvei.jpg';
 
   @override
   Widget build(BuildContext context) {
@@ -44,12 +44,23 @@ class MisVehiculos extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   child: Column(
                     children: [
+                      GestureDetector(
+                        onTap: () {
+                          String url = 'https://wa.me/541139101010?text=¡Hola!%20Quiero%20comunicarme%20con%20DNRPA.';
+                          launchURL(url); // Abrir el URL de WhatsApp
+                        },
+                        child: Image.asset(
+                          cardImagePath,
+                          fit: BoxFit.cover,
+                          width: MediaQuery.of(context).size.width,
+                        ),
+                      ),
+                      // Nueva imagen debajo de la imagen anterior
                       Image.asset(
-                        cardImagePath,
+                        ImagePath,
                         fit: BoxFit.cover,
                         width: MediaQuery.of(context).size.width,
                       ),
-                      // Puedes agregar más contenido aquí según sea necesario
                     ],
                   ),
                 ),

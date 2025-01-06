@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MiTrabajo extends StatelessWidget {
-  final String headerImagePath = 'lib/img/headerMiTrabajo.png';
-  final String cardImagePath = 'lib/img/cardMiTrabajo.png';
+  final String headerImagePath = 'lib/img/headerMiTrabajo.jpg';
+  final String cardImagePath = 'lib/img/cardMiTrabajo.jpg';
   final String footerImagePath = 'lib/img/footer.png';
 
   @override

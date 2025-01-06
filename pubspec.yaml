@@ -61,24 +61,29 @@ flutter:
     - lib/img/segundaParteInicio.png
     - lib/img/terceraParteInicio.png
     - lib/img/footer.png
-    - lib/img/headerVehiculos.png
-    - lib/img/cardParaVehiculo.png
-    - lib/img/headerMiSalud.png
-    - lib/img/cardUnoSalud.png
+    - lib/img/headerVei.jpg
+    - lib/img/exteriorVei.jpg
+    - lib/img/nohayvei.jpg
+    - lib/img/headerMiSalud.jpg
+    - lib/img/cardUnoSalud.jpg
     - lib/img/cardDosSalud.png
     - lib/img/cardTresSalud.png
-    - lib/img/headerMisTurnos.png
-    - lib/img/cardParaMisTurnos.png
-    - lib/img/headerMisCobros.png
-    - lib/img/cardMisCobros.png
-    - lib/img/headerMisTramites.png
-    - lib/img/cardMisTramites.png
-    - lib/img/headerMisHijos.png
-    - lib/img/cardMisHijos.png
-    - lib/img/headerMiTrabajo.png
-    - lib/img/cardMiTrabajo.png
+    - lib/img/headerMisTurnos.jpg
+    - lib/img/cardParaMisTurnos.jpg
+    - lib/img/headerMisCobros.jpg
+    - lib/img/cardMisCobros.jpg
+    - lib/img/headerMisTramites.jpg
+    - lib/img/cardMisTramites.jpg
+    - lib/img/headerMisHijos.jpg
+    - lib/img/cardMisHijos.jpg
+    - lib/img/headerMiTrabajo.jpg
+    - lib/img/cardMiTrabajo.jpg
     - lib/img/PantallaCarga.jpg
     - lib/img/infoDNI.png
+<<<<<<< HEAD
     - lib/img/todasTusCredenciales.png
+=======
+   
+>>>>>>> df0b1d54e9ece1c4cbfae04837c05b87dbd7e8e6
 
     
