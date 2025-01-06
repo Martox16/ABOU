@@ -101,7 +101,7 @@ class HomePage extends StatelessWidget {
           children: [
             ServiceIcon(
               imagePath: 'lib/img/iconoDocumentos.png',
-              label: 'Documentos',
+              label: '',
               onTap: () {
                 Navigator.push(
                   context,
@@ -123,7 +123,7 @@ class HomePage extends StatelessWidget {
                             ),
                             ServiceIcon(
                               imagePath: 'lib/img/iconoVehiculos.png',
-                              label: 'Mis vehículos',
+                              label: '',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -147,7 +147,7 @@ class HomePage extends StatelessWidget {
                             ),
                             ServiceIcon(
                               imagePath: 'lib/img/iconoSalud.png',
-                              label: 'Mi salud',
+                              label: '',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -171,7 +171,7 @@ class HomePage extends StatelessWidget {
                             ),
                             ServiceIcon(
                               imagePath: 'lib/img/iconoTrabajo.png',
-                              label: 'Mi trabajo',
+                              label: '',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -195,7 +195,7 @@ class HomePage extends StatelessWidget {
                             ),
                             ServiceIcon(
                               imagePath: 'lib/img/iconoTurnos.png',
-                              label: 'Mis turnos',
+                              label: '',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -219,7 +219,7 @@ class HomePage extends StatelessWidget {
                             ),
                             ServiceIcon(
                               imagePath: 'lib/img/iconoCobros.png',
-                              label: 'Mis cobros',
+                              label: '',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -243,7 +243,7 @@ class HomePage extends StatelessWidget {
                             ),
                             ServiceIcon(
                               imagePath: 'lib/img/iconoTramites.png',
-                              label: 'Mis trámites',
+                              label: '',
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -267,7 +267,7 @@ class HomePage extends StatelessWidget {
                             ),
                             ServiceIcon(
                               imagePath: 'lib/img/iconoHijos.png',
-                              label: 'Mis hijos',
+                              label: '',
                               onTap: () {
                                 Navigator.push(
                                   context,
