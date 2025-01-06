@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart";
 import 'DNI.dart'; // Importa el archivo DNI.dart
 
 class ContraDNI extends StatefulWidget {

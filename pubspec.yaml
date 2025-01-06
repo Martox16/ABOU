@@ -27,6 +27,7 @@ flutter:
 
   assets:
     - lib/img/iconoCobros.png
+    - lib/img/turnosProgramados.jpg
     - lib/img/iconoDocumentos.png
     - lib/img/iconoHijos.png
     - lib/img/iconoSalud.png
@@ -34,7 +35,7 @@ flutter:
     - lib/img/iconoTramites.png
     - lib/img/iconoTurnos.png
     - lib/img/iconoVehiculos.png
-    - lib/img/logoMiArg.png
+    - lib/img/iconoArg.png
     - lib/img/logoPerfil.png
     - lib/img/menuNav.png
     - lib/img/solicitarTurno.png
@@ -76,5 +77,7 @@ flutter:
     - lib/img/cardMisHijos.png
     - lib/img/headerMiTrabajo.png
     - lib/img/cardMiTrabajo.png
-    - lib/img/PantallaCarga.png
+    - lib/img/PantallaCarga.jpg
     - lib/img/infoDNI.png
+
+    

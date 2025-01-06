@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'dart:math';
 import 'verDetalles.dart';
-import 'inicio.dart'; // Importa el archivo inicio.dart
+// Importa el archivo inicio.dart
 import 'package:url_launcher/url_launcher.dart'; // Importar para usar launchURL
 
 class DNI extends StatefulWidget {

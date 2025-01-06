@@ -22,7 +22,7 @@ class _MisDocumentosState extends State<MisDocumentos> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Color(0xFF3773BC),
+        backgroundColor: Color(0xFF372FC0),
         title: Row(
           children: [
             IconButton(
@@ -48,7 +48,7 @@ class _MisDocumentosState extends State<MisDocumentos> {
                 );
               },
             ),
-            Text('Mis documentos', style: TextStyle(color: Colors.white)),
+            Text('Documentos', style: TextStyle(color: Colors.white)),
           ],
         ),
         centerTitle: true,
