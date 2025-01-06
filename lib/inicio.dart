@@ -99,65 +99,66 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // Imagen de turnosProgramados
                 Image.asset('lib/img/turnosProgramados.jpg'),
-                Card(
-                  color: Color(0xFFF0F0F0),
-                  elevation: 0,
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '¿Qué necesitas hoy?',
-                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(height: 20),
-                        
-                        GridView.builder(
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 4,
-                            crossAxisSpacing: 10.0,
-                            mainAxisSpacing: 10.0,
-                          ),
-                          itemCount: imagePaths.length,
-                          shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
-                          itemBuilder: (context, index) {
-                            return GestureDetector(
-                              onTap: () {
-                                // Navega a la página correspondiente con una animación personalizada
-                                Navigator.push(
-                                  context,
-                                  PageRouteBuilder(
-                                    pageBuilder: (context, animation, secondaryAnimation) {
-                                      return destinationPages[index];
-                                    },
-                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                      // Definimos la animación de transición
-                                      const begin = Offset(1.0, 0.0); // La nueva pantalla viene desde la derecha
-                                      const end = Offset.zero; // La nueva pantalla se establece en su posición final
-                                      const curve = Curves.easeInOut; // Curva de la animación
+                
+                // Espacio entre las imágenes
+                SizedBox(height: 20),
 
-                                      var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-                                      var offsetAnimation = animation.drive(tween);
+                // Imagen centrada sobre el texto
+                Center(
+                  child: Image.asset('lib/img/todasTusCredenciales.png'),
+                ),
+                
+                // Espacio adicional entre la imagen y el texto
+                SizedBox(height: 20),
 
-                                      // Aplicamos la animación al contenido de la pantalla
-                                      return SlideTransition(position: offsetAnimation, child: child);
-                                    },
-                                  ),
-                                );
-                              },
-                              child: Image.asset(
-                                imagePaths[index],
-                                fit: BoxFit.cover,
-                              ),
-                            );
-                          },
-                        ),
-                      ],
-                    ),
+                Text(
+                  '¿Qué necesitas hoy?',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 20),
+                
+                GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4,
+                    crossAxisSpacing: 10.0,
+                    mainAxisSpacing: 10.0,
                   ),
+                  itemCount: imagePaths.length,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () {
+                        // Navega a la página correspondiente con una animación personalizada
+                        Navigator.push(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) {
+                              return destinationPages[index];
+                            },
+                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                              // Definimos la animación de transición
+                              const begin = Offset(1.0, 0.0); // La nueva pantalla viene desde la derecha
+                              const end = Offset.zero; // La nueva pantalla se establece en su posición final
+                              const curve = Curves.easeInOut; // Curva de la animación
+
+                              var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+                              var offsetAnimation = animation.drive(tween);
+
+                              // Aplicamos la animación al contenido de la pantalla
+                              return SlideTransition(position: offsetAnimation, child: child);
+                            },
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        imagePaths[index],
+                        fit: BoxFit.cover,
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
