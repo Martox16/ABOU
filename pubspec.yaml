@@ -45,13 +45,13 @@ flutter:
     - lib/img/footerTina.png
     - lib/img/miniDNI.png
     - lib/img/manoTelefono.png
-    - lib/img/cardMINIdni.png
-    - lib/img/cardMINIdniABIERTO.png
-    - lib/img/cardMINIdniSegundaParte.png
-    - lib/img/cardMINIdniABIERTOprimeraparte.png
-    - lib/img/headerDNIDIGITAL.png
+    - lib/img/cardMINIdni.jpg
+    - lib/img/cardMINIdniABIERTO.jpg
+    - lib/img/cardMINIdniABIERTOsegundaparte.jpg
+    - lib/img/cardMINIdniABIERTOprimeraparte.jpg
+    - lib/img/headerDNIDIGITAL.jpg
     - lib/img/ingresaPIN.png
-    - lib/img/headerDNI.png
+    - lib/img/headerDNI.jpg
     - lib/img/carnetAdelante.png
     - lib/img/carnetAtras.png
     - lib/img/puntoCambioA.png

@@ -7,7 +7,7 @@ class ContraDNI extends StatefulWidget {
 }
 
 class _ContraDNIState extends State<ContraDNI> {
-  final String headerImagePath = 'lib/img/headerDNIDIGITAL.png';
+  final String headerImagePath = 'lib/img/headerDNIDIGITAL.jpg';
   final String pinImagePath = 'lib/img/ingresaPIN.png';
 
   void _navigateToPreviousPage() {

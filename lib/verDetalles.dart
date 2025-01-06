@@ -34,7 +34,7 @@ class VerDetalles extends StatelessWidget {
                 },
                 child: Container(
                   width: double.infinity,
-                  child: Image.asset('lib/img/headerDNI.png', fit: BoxFit.cover),
+                  child: Image.asset('lib/img/headerDNI.jpg', fit: BoxFit.cover),
                 ),
               ),
               SizedBox(height: 8), // Espacio reducido entre el header y la card

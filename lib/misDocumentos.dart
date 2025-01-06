@@ -36,9 +36,7 @@ class _MisDocumentosState extends State<MisDocumentos> {
                       var begin = Offset(-1.0, 0.0);
                       var end = Offset.zero;
                       var curve = Curves.ease;
-
                       var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
-
                       return SlideTransition(
                         position: animation.drive(tween),
                         child: child,
@@ -47,18 +45,26 @@ class _MisDocumentosState extends State<MisDocumentos> {
                   ),
                 );
               },
+              padding: EdgeInsets.only(left: 8),  // Más cerca del borde izquierdo
             ),
-            Text('Documentos', style: TextStyle(color: Colors.white)),
+            Padding(
+              padding: EdgeInsets.only(left: 16),  // Ajuste de padding para acercar el texto a la flecha
+              child: Text(
+                'Documentos',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
           ],
         ),
-        centerTitle: true,
-        toolbarHeight: 50, // Ajustar la altura del AppBar
+        centerTitle: false,  // Desactiva el centrado del título para mantener la alineación con la flecha
+        toolbarHeight: 60,  // Ajusta la altura del AppBar
       ),
       body: Container(
-        color: Colors.grey.shade200,
+        color: Colors.grey.shade200,  // Gris claro para el fondo de la vista
         child: SingleChildScrollView(
           child: Column(
             children: [
+              SizedBox(height: 10),  // Espacio de 10px entre el AppBar y la imagen
               GestureDetector(
                 onTap: _toggleCard,
                 child: _isCardOpened
@@ -66,10 +72,13 @@ class _MisDocumentosState extends State<MisDocumentos> {
                         children: [
                           GestureDetector(
                             onTap: _toggleCard,
-                            child: Image.asset(
-                              'lib/img/cardMINIdniABIERTOprimeraparte.png',
-                              width: double.infinity,
-                              fit: BoxFit.contain,
+                            child: Container(
+                              alignment: Alignment.center,  // Centrado de la imagen
+                              child: Image.asset(
+                                'lib/img/cardMINIdniABIERTOprimeraparte.jpg',
+                                width: 0.8 * MediaQuery.of(context).size.width,  // 80% de ancho
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ),
                           GestureDetector(
@@ -79,18 +88,24 @@ class _MisDocumentosState extends State<MisDocumentos> {
                                 MaterialPageRoute(builder: (context) => DNI()),
                               );
                             },
-                            child: Image.asset(
-                              'lib/img/cardMINIdniSegundaParte.png',
-                              width: double.infinity,
-                              fit: BoxFit.contain,
+                            child: Container(
+                              alignment: Alignment.center,  // Centrado de la imagen
+                              child: Image.asset(
+                                'lib/img/cardMINIdniABIERTOsegundaparte.jpg',
+                                width: 0.8 * MediaQuery.of(context).size.width,  // 80% de ancho
+                                fit: BoxFit.contain,
+                              ),
                             ),
                           ),
                         ],
                       )
-                    : Image.asset(
-                        'lib/img/cardMINIdni.png',
-                        width: double.infinity,
-                        fit: BoxFit.contain,
+                    : Container(
+                        alignment: Alignment.center,  // Centrado de la imagen
+                        child: Image.asset(
+                          'lib/img/cardMINIdni.jpg',
+                          width: 0.8 * MediaQuery.of(context).size.width,  // 80% de ancho
+                          fit: BoxFit.contain,
+                        ),
                       ),
               ),
             ],

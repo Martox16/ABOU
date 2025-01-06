@@ -68,7 +68,7 @@ class _DNIState extends State<DNI> {
                 },
                 child: Container(
                   width: double.infinity,
-                  child: Image.asset('lib/img/headerDNI.png', fit: BoxFit.cover),
+                  child: Image.asset('lib/img/headerDNI.jpg', fit: BoxFit.cover),
                 ),
               ),
               Padding(
