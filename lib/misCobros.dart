@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MisCobros extends StatelessWidget {
-  final String headerImagePath = 'lib/img/headerMisCobros.png'; // Cambio de imagen del encabezado
-  final String cardImagePath = 'lib/img/cardMisCobros.png'; // Cambio de imagen de la tarjeta
-  final String footerImagePath = 'lib/img/footer.png'; // Mantenemos la imagen del footer
+  final String headerImagePath = 'lib/img/headerMisCobros.jpg'; // Imagen del encabezado
+  final String cardImagePath = 'lib/img/cardMisCobros.jpg'; // Imagen de la tarjeta
+  final String footerImagePath = 'lib/img/footer.png'; // Imagen del footer
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +40,16 @@ class MisCobros extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   child: Column(
                     children: [
-                      Image.asset(
-                        cardImagePath,
-                        fit: BoxFit.cover,
-                        width: MediaQuery.of(context).size.width,
+                      GestureDetector(
+                        onTap: () {
+                          String url = 'https://www.argentina.gob.ar/capital-humano/familia/canal-de-denuncias';
+                          launchURL(url); // Abrir el enlace cuando se toque la imagen
+                        },
+                        child: Image.asset(
+                          cardImagePath,
+                          fit: BoxFit.cover,
+                          width: MediaQuery.of(context).size.width,
+                        ),
                       ),
                       // Puedes agregar más contenido aquí según sea necesario
                     ],

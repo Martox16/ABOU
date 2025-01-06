@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MisTramites extends StatelessWidget {
-  final String headerImagePath = 'lib/img/headerMisTramites.png'; // Nueva imagen de encabezado para trámites
-  final String cardImagePath = 'lib/img/cardMisTramites.png'; // Nueva imagen de tarjeta para trámites
+  final String headerImagePath = 'lib/img/headerMisTramites.jpg'; // Nueva imagen de encabezado para trámites
+  final String cardImagePath = 'lib/img/cardMisTramites.jpg'; // Nueva imagen de tarjeta para trámites
   final String footerImagePath = 'lib/img/footer.png'; // Misma imagen de footer que vehículos
 
   @override
@@ -40,10 +40,16 @@ class MisTramites extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   child: Column(
                     children: [
-                      Image.asset(
-                        cardImagePath,
-                        fit: BoxFit.cover,
-                        width: MediaQuery.of(context).size.width,
+                      GestureDetector(
+                        onTap: () {
+                          String url = 'https://www.argentina.gob.ar/subsidios';
+                          launchURL(url); // Abrir el enlace cuando se toque la imagen
+                        },
+                        child: Image.asset(
+                          cardImagePath,
+                          fit: BoxFit.cover,
+                          width: MediaQuery.of(context).size.width,
+                        ),
                       ),
                       // Puedes agregar más contenido aquí según sea necesario
                     ],
