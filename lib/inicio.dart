@@ -106,10 +106,18 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      // Imagen de turnosProgramados
-                      Image.asset('lib/img/turnosProgramados.jpg'),
-
-                      // Espacio entre las imágenes
+                      // Imagen de turnosProgramados responsive
+                      LayoutBuilder(
+                        builder: (context, constraints) {
+                          return Center(
+                            child: Image.asset(
+                              'lib/img/turnosProgramados.jpg',
+                              width: constraints.maxWidth * 0.9, // 90% del ancho disponible
+                              fit: BoxFit.contain, // Ajusta la imagen sin recortar
+                            ),
+                          );
+                        },
+                      ),
                       SizedBox(height: 20),
 
                       // Imagen centrada sobre el texto
@@ -164,6 +172,18 @@ class HomePage extends StatelessWidget {
                             ),
                           );
                         },
+                      ),
+
+                      // Espacio adicional
+                      SizedBox(height: 20),
+
+                      // Imagen "Completa tu perfil" centrada
+                      Center(
+                        child: Image.asset(
+                          'lib/img/completaTuPerfil.png',
+                          width: constraints.maxWidth * 0.8, // 80% del ancho disponible
+                          fit: BoxFit.contain,
+                        ),
                       ),
                     ],
                   ),

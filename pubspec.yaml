@@ -81,5 +81,6 @@ flutter:
     - lib/img/PantallaCarga.jpg
     - lib/img/infoDNI.png
     - lib/img/todasTusCredenciales.png
+    - lib/img/completaTuPerfil.png
 
     
