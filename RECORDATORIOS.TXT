@@ -49,4 +49,3 @@ funcionalidad de la persona
 
 NOVEDADES
 TELEFONO
-arreglar bug q corta pantalla
