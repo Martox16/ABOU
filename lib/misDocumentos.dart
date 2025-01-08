@@ -45,10 +45,10 @@ class _MisDocumentosState extends State<MisDocumentos> {
                   ),
                 );
               },
-              padding: EdgeInsets.only(left: 8),  // Más cerca del borde izquierdo
+              padding: EdgeInsets.only(left: 8),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 16),  // Ajuste de padding para acercar el texto a la flecha
+              padding: EdgeInsets.only(left: 16),
               child: Text(
                 'Documentos',
                 style: TextStyle(color: Colors.white),
@@ -56,60 +56,69 @@ class _MisDocumentosState extends State<MisDocumentos> {
             ),
           ],
         ),
-        centerTitle: false,  // Desactiva el centrado del título para mantener la alineación con la flecha
-        toolbarHeight: 60,  // Ajusta la altura del AppBar
+        centerTitle: false,
+        toolbarHeight: 60,
       ),
       body: Container(
-        color: Colors.grey.shade200,  // Gris claro para el fondo de la vista
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(height: 10),  // Espacio de 10px entre el AppBar y la imagen
-              GestureDetector(
-                onTap: _toggleCard,
-                child: _isCardOpened
-                    ? Column(
-                        children: [
-                          GestureDetector(
-                            onTap: _toggleCard,
-                            child: Container(
-                              alignment: Alignment.center,  // Centrado de la imagen
+        color: Color(0xFFF0F0F0), // Fondo uniforme
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            return SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: constraints.maxHeight, // Asegura que el contenido ocupe al menos toda la altura disponible
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(height: 10),
+                    GestureDetector(
+                      onTap: _toggleCard,
+                      child: _isCardOpened
+                          ? Column(
+                              children: [
+                                GestureDetector(
+                                  onTap: _toggleCard,
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    child: Image.asset(
+                                      'lib/img/cardMINIdniABIERTOprimeraparte.jpg',
+                                      width: 0.8 * MediaQuery.of(context).size.width,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => DNI()),
+                                    );
+                                  },
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    child: Image.asset(
+                                      'lib/img/cardMINIdniABIERTOsegundaparte.jpg',
+                                      width: 0.8 * MediaQuery.of(context).size.width,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          : Container(
+                              alignment: Alignment.center,
                               child: Image.asset(
-                                'lib/img/cardMINIdniABIERTOprimeraparte.jpg',
-                                width: 0.8 * MediaQuery.of(context).size.width,  // 80% de ancho
+                                'lib/img/cardMINIdni.jpg',
+                                width: 0.8 * MediaQuery.of(context).size.width,
                                 fit: BoxFit.contain,
                               ),
                             ),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => DNI()),
-                              );
-                            },
-                            child: Container(
-                              alignment: Alignment.center,  // Centrado de la imagen
-                              child: Image.asset(
-                                'lib/img/cardMINIdniABIERTOsegundaparte.jpg',
-                                width: 0.8 * MediaQuery.of(context).size.width,  // 80% de ancho
-                                fit: BoxFit.contain,
-                              ),
-                            ),
-                          ),
-                        ],
-                      )
-                    : Container(
-                        alignment: Alignment.center,  // Centrado de la imagen
-                        child: Image.asset(
-                          'lib/img/cardMINIdni.jpg',
-                          width: 0.8 * MediaQuery.of(context).size.width,  // 80% de ancho
-                          fit: BoxFit.contain,
-                        ),
-                      ),
+                    ),
+                  ],
+                ),
               ),
-            ],
-          ),
+            );
+          },
         ),
       ),
       bottomNavigationBar: GestureDetector(
@@ -127,10 +136,10 @@ class _MisDocumentosState extends State<MisDocumentos> {
           }
         },
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.08, // Altura del footer ajustada proporcionalmente
+          height: MediaQuery.of(context).size.height * 0.08,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('lib/img/footer.png'), // Asegúrate de que el path sea correcto
+              image: AssetImage('lib/img/footer.png'),
               fit: BoxFit.cover,
             ),
           ),
