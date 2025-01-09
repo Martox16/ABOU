@@ -70,7 +70,7 @@ class _MisDocumentosState extends State<MisDocumentos> {
                 ),
                 child: Column(
                   children: [
-                    SizedBox(height: 10),
+                    SizedBox(height: 20),
                     GestureDetector(
                       onTap: _toggleCard,
                       child: _isCardOpened
@@ -80,10 +80,16 @@ class _MisDocumentosState extends State<MisDocumentos> {
                                   onTap: _toggleCard,
                                   child: Container(
                                     alignment: Alignment.center,
-                                    child: Image.asset(
-                                      'lib/img/cardMINIdniABIERTOprimeraparte.jpg',
-                                      width: 0.8 * MediaQuery.of(context).size.width,
-                                      fit: BoxFit.contain,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.vertical(
+                                        top: Radius.circular(15), // Radio para la parte superior
+                                        bottom: Radius.zero,
+                                      ),
+                                      child: Image.asset(
+                                        'lib/img/cardMINIdniABIERTOprimeraparte.jpg',
+                                        width: 0.9 * MediaQuery.of(context).size.width,
+                                        fit: BoxFit.contain,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -96,10 +102,16 @@ class _MisDocumentosState extends State<MisDocumentos> {
                                   },
                                   child: Container(
                                     alignment: Alignment.center,
-                                    child: Image.asset(
-                                      'lib/img/cardMINIdniABIERTOsegundaparte.jpg',
-                                      width: 0.8 * MediaQuery.of(context).size.width,
-                                      fit: BoxFit.contain,
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.vertical(
+                                        top: Radius.zero,
+                                        bottom: Radius.circular(15), // Radio para la parte inferior
+                                      ),
+                                      child: Image.asset(
+                                        'lib/img/cardMINIdniABIERTOsegundaparte.jpg',
+                                        width: 0.9 * MediaQuery.of(context).size.width,
+                                        fit: BoxFit.contain,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -107,10 +119,15 @@ class _MisDocumentosState extends State<MisDocumentos> {
                             )
                           : Container(
                               alignment: Alignment.center,
-                              child: Image.asset(
-                                'lib/img/cardMINIdni.jpg',
-                                width: 0.8 * MediaQuery.of(context).size.width,
-                                fit: BoxFit.contain,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(15), // Borde redondeado para todos los lados
+                                ),
+                                child: Image.asset(
+                                  'lib/img/cardMINIdni.jpg',
+                                  width: 0.9 * MediaQuery.of(context).size.width,
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
                     ),
