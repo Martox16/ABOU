@@ -9,6 +9,7 @@ import 'misCobros.dart';    // misCobros.dart
 import 'misTramites.dart';  // misTramites.dart
 import 'misHijos.dart';     // misHijos.dart
 import 'miTrabajo.dart';    // miTrabajo.dart
+import 'miPerfil.dart';
 
 void main() {
   runApp(MyApp());
@@ -83,7 +84,12 @@ class HomePage extends StatelessWidget {
                     width: 32,
                     height: 32,
                   ),
-                  onPressed: () {},
+                   onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => MiPerfil()),
+    );
+  },
                 ),
               ],
             ),
