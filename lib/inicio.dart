@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart'; // Importa url_launcher para abrir URLs
+import 'package:url_launcher/url_launcher.dart';
 // Importa las páginas correspondientes
 import 'MisDocumentos.dart'; // MisDocumentos.dart
 import 'MisVehiculos.dart';  // MisVehiculos.dart
@@ -9,7 +9,7 @@ import 'misCobros.dart';    // misCobros.dart
 import 'misTramites.dart';  // misTramites.dart
 import 'misHijos.dart';     // misHijos.dart
 import 'miTrabajo.dart';    // miTrabajo.dart
-import 'miPerfil.dart';
+import 'miPerfil.dart';     // miPerfil.dart
 
 void main() {
   runApp(MyApp());
@@ -32,7 +32,6 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Lista de las rutas de las imágenes
     final List<String> imagePaths = [
       'lib/img/iconoDocumentos.png',
       'lib/img/iconoVehiculos.png',
@@ -45,14 +44,14 @@ class HomePage extends StatelessWidget {
     ];
 
     final List<Widget> destinationPages = [
-      MisDocumentos(), // Pantalla para los documentos
-      MisVehiculos(),  // Pantalla para vehículos
-      MiTrabajo(),     // Pantalla para trabajo
-      MiSalud(),       // Pantalla para salud
-      MisCobros(),     // Pantalla para cobros
-      MisTramites(),   // Pantalla para trámites
-      MisTurnos(),     // Pantalla para turnos
-      MisHijos(),      // Pantalla para hijos
+      MisDocumentos(),
+      MisVehiculos(),
+      MiTrabajo(),
+      MiSalud(),
+      MisCobros(),
+      MisTramites(),
+      MisTurnos(),
+      MisHijos(),
     ];
 
     return Scaffold(
@@ -84,12 +83,12 @@ class HomePage extends StatelessWidget {
                     width: 32,
                     height: 32,
                   ),
-                   onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => MiPerfil()),
-    );
-  },
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MiPerfil()),
+                    );
+                  },
                 ),
               ],
             ),
@@ -98,13 +97,13 @@ class HomePage extends StatelessWidget {
         ),
       ),
       body: Container(
-        color: Color(0xFFF0F0F0), // Color de fondo
+        color: Color(0xFFF0F0F0),
         child: LayoutBuilder(
           builder: (context, constraints) {
             return SingleChildScrollView(
               child: ConstrainedBox(
                 constraints: BoxConstraints(
-                  minHeight: constraints.maxHeight, // Asegura que el contenido ocupe al menos toda la altura disponible
+                  minHeight: constraints.maxHeight,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -112,35 +111,27 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      // Imagen de turnosProgramados responsive
                       LayoutBuilder(
                         builder: (context, constraints) {
                           return Center(
                             child: Image.asset(
                               'lib/img/turnosProgramados.jpg',
-                              width: constraints.maxWidth * 0.9, // 90% del ancho disponible
-                              fit: BoxFit.contain, // Ajusta la imagen sin recortar
+                              width: constraints.maxWidth * 0.9,
+                              fit: BoxFit.contain,
                             ),
                           );
                         },
                       ),
                       SizedBox(height: 20),
-
-                      // Imagen centrada sobre el texto
                       Center(
                         child: Image.asset('lib/img/todasTusCredenciales.png'),
                       ),
-
-                      // Espacio adicional entre la imagen y el texto
                       SizedBox(height: 20),
-
                       Text(
                         '¿Qué necesitas hoy?',
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 20),
-
-                      // GridView ajustado
                       GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 4,
@@ -179,15 +170,11 @@ class HomePage extends StatelessWidget {
                           );
                         },
                       ),
-
-                      // Espacio adicional
                       SizedBox(height: 20),
-
-                      // Imagen "Completa tu perfil" centrada
                       Center(
                         child: Image.asset(
                           'lib/img/completaTuPerfil.png',
-                          width: constraints.maxWidth * 0.8, // 80% del ancho disponible
+                          width: constraints.maxWidth * 0.8,
                           fit: BoxFit.contain,
                         ),
                       ),
